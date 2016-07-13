@@ -57,12 +57,12 @@ namespace Task_Book
 
         public int CompareTo(Book other)
         {
-           if (ReferenceEquals(this, other))
+            if (ReferenceEquals(this, other))
                 return 0;
             if (ReferenceEquals(other, null))
                 return -1;
 
-           return CompareTo(other, Criterion.Title);
+            return CompareTo(other, Criterion.Title);
         }
 
         public int CompareTo(Book other, Criterion criterion = Criterion.Title)
@@ -93,7 +93,7 @@ namespace Task_Book
                     }
                     break;
                 case Criterion.Author:
-                    this.Author.CompareTo(other.Author);
+                    compare = this.Author.CompareTo(other.Author);
                     if (compare != 0)
                     {
                         return compare;
@@ -164,7 +164,7 @@ namespace Task_Book
                     SortYear(arrayBook);
                     break;
             }
-            
+
         }
 
         private static void SortYear(Book[] arrBook)
@@ -197,13 +197,13 @@ namespace Task_Book
 
         private static void SortAuthor(Book[] arrBook)
         {
-            for (int i = 0; i < arrBook.Length; i++)
+            for (int i = 0; i < arrBook.Length-1; i++)
             {
-                for (int j = 0; j < arrBook.Length - 1; j++)
+                for (int j = 0; j < arrBook.Length - i - 1; j++)
                 {
-                    if (arrBook[i].CompareTo(arrBook[j + 1],Criterion.Author) == 1)
+                    if (arrBook[j].CompareTo(arrBook[j + 1], Criterion.Author) == 1)
                     {
-                        Swap(ref arrBook[i],ref arrBook[j + 1]);
+                        Swap(ref arrBook[j], ref arrBook[j + 1]);
                     }
                 }
             }

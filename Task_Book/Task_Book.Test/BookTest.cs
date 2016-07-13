@@ -12,7 +12,7 @@ namespace Task_Book.Test
     public class BookTest
     {
         [Test,TestCaseSource(nameof(BooksSortData))]
-        public void Book_Sort_By_Criterion(Book[] arrBooks, Book[] expectedBooks, Criterion criterion)
+        public void Book_Sort_By_Criterion(Book[] arrBooks, Criterion criterion, Book[] expectedBooks)
         {
             SortBooks(arrBooks, criterion);
             CollectionAssert.AreEqual(arrBooks, expectedBooks);
