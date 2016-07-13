@@ -57,28 +57,12 @@ namespace Task_Book
 
         public int CompareTo(Book other)
         {
-            //int compare = this.Author.CompareTo(other.Author);
-            //if (compare != 0)
-            //{
-            //    return compare;
-            //}
-            //compare = this.Title.CompareTo(other.Title);
-            //if (compare != 0)
-            //{
-            //    return compare;
-            //}
-            //compare = this.Genre.CompareTo(other.Genre);
-            //if (compare != 0)
-            //{
-            //    return compare;
-            //}
-            if (ReferenceEquals(this, other))
+           if (ReferenceEquals(this, other))
                 return 0;
             if (ReferenceEquals(other, null))
                 return -1;
 
-            //(SortType)31, All = 31
-            return CompareTo(other, Criterion.Title);
+           return CompareTo(other, Criterion.Title);
         }
 
         public int CompareTo(Book other, Criterion criterion = Criterion.Title)
@@ -163,7 +147,7 @@ namespace Task_Book
             return hash;
         }
 
-        public static Book[] SortBooks(Book[] arrayBook, Criterion criterion = Criterion.Title)
+        public static void SortBooks(Book[] arrayBook, Criterion criterion = Criterion.Title)
         {
             if (ReferenceEquals(arrayBook, null))
                 throw new ArgumentException();
@@ -180,7 +164,7 @@ namespace Task_Book
                     SortYear(arrayBook);
                     break;
             }
-            return null;
+            
         }
 
         private static void SortYear(Book[] arrBook)
