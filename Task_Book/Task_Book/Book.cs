@@ -169,13 +169,13 @@ namespace Task_Book
 
         private static void SortYear(Book[] arrBook)
         {
-            for (int i = 0; i < arrBook.Length; i++)
+            for (int i = 0; i < arrBook.Length - 1; i++)
             {
-                for (int j = 0; j < arrBook.Length - 1; j++)
+                for (int j = 0; j < arrBook.Length - i - 1; j++)
                 {
-                    if (arrBook[i].CompareTo(arrBook[j + 1], Criterion.Year) == 1)
+                    if (arrBook[j].CompareTo(arrBook[j + 1], Criterion.Year) == 1)
                     {
-                        Swap(ref arrBook[i], ref arrBook[j + 1]);
+                        Swap(ref arrBook[j], ref arrBook[j + 1]);
                     }
                 }
             }
@@ -183,13 +183,13 @@ namespace Task_Book
 
         private static void SortTitle(Book[] arrBook)
         {
-            for (int i = 0; i < arrBook.Length; i++)
+            for (int i = 0; i < arrBook.Length - 1; i++)
             {
-                for (int j = 0; j < arrBook.Length - 1; j++)
+                for (int j = 0; j < arrBook.Length - i - 1; j++)
                 {
-                    if (arrBook[i].CompareTo(arrBook[j + 1], Criterion.Title) == 1)
+                    if (arrBook[j].CompareTo(arrBook[j + 1], Criterion.Title) == 1)
                     {
-                        Swap(ref arrBook[i], ref arrBook[j + 1]);
+                        Swap(ref arrBook[j], ref arrBook[j + 1]);
                     }
                 }
             }

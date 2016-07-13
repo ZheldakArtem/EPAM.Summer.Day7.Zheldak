@@ -19,19 +19,19 @@ namespace Task_Book.Test
         }
 
 
-        public static Book[] BooksData { get; } = {
+        public static readonly Book[] BooksData = {
             new Book("CCC","AAA","BBB",13),
             new Book("AAA","BBB","CCC",1),
             new Book("BBB","CCC","AAA",14)
         };
 
-        public static Book[] ExpectedBooksByAuthor { get; } = {
+        public static readonly Book[] ExpectedBooksByAuthor = {
             new Book("AAA", "BBB", "CCC", 1),
             new Book("BBB", "CCC", "AAA", 14),
             new Book("CCC", "AAA", "BBB", 13)
         };
 
-        public static Book[] ExpectedBooksByTitle { get; } = {
+        public static readonly Book[] ExpectedBooksByTitle = {
             new Book("CCC", "AAA", "BBB", 13),
             new Book("AAA", "BBB", "CCC", 1),
             new Book("BBB", "CCC", "AAA", 14)
@@ -43,10 +43,11 @@ namespace Task_Book.Test
             new Book("BBB", "CCC", "AAA", 14)
         };
 
-        public static object[] BooksSortData { get; } = {
-            new object[] {BooksData, Criterion.Author, ExpectedBooksByAuthor},
-            new object[] {BooksData, Criterion.Title, ExpectedBooksByTitle},
+        public static readonly object[] BooksSortData  = {
             new object[] {BooksData, Criterion.Year, ExpectedBooksByYear},
+            new object[] {BooksData, Criterion.Title, ExpectedBooksByTitle},
+            new object[] {BooksData, Criterion.Author, ExpectedBooksByAuthor}
+            
         };
     }
 }
