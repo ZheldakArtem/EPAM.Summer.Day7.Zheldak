@@ -46,6 +46,11 @@
   <ItemGroup>
     <Compile Include="BookTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortBookAuthor.cs" />
+    <Compile Include="SortBookByPage.cs" />
+    <Compile Include="SortBookPublication.cs" />
+    <Compile Include="SortBookTitle.cs" />
+    <Compile Include="SortBookYear.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

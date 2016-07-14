@@ -6,37 +6,40 @@ using System.Threading.Tasks;
 using static System.Math;
 namespace Task_Shape
 {
+    /// <summary>
+    /// The class describing a circle
+    /// </summary>
     public class Circle : Shape
     {
-        private double _r;
+        private double _radius;
 
-        public double R
+        public double Radius
         {
-            get { return _r; }
+            get { return _radius; }
             set
             {
                 if (value < 0)
                     throw new ArgumentException();
-                _r = value;
+                _radius = value;
             }
         }
 
         public Circle(double r)
         {
-            R = r;
+            Radius = r;
         }
 
         public override double GetPerimeter()
         {
-            return 2 * PI * R;
+            return 2 * PI * Radius;
         }
         public override double GetArea()
         {
-            return PI * R * R;
+            return PI * Radius * Radius;
         }
         public double GetDiamete()
         {
-            return 2*R;
+            return 2*Radius;
         }
     }
 }

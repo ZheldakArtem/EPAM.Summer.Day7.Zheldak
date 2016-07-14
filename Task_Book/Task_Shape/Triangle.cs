@@ -8,7 +8,9 @@ using static System.Math;
 
 namespace Task_Shape
 {
-
+    /// <summary>
+    /// The class describing a triangle
+    /// </summary>
     public class Triangle : Shape
     {
         private double _a;

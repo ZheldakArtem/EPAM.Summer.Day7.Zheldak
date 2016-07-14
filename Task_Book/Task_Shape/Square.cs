@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using static System.Math;
 namespace Task_Shape
 {
+    /// <summary>
+    /// The class describing a Square
+    /// </summary>
     public class Square : Shape
     {
         private double _a;

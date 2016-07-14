@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using static System.Math;
 namespace Task_Shape
 {
+    /// <summary>
+    /// The class describing a Rectangle
+    /// </summary>
     public class Rectangle : Shape
     {
         private double _a;

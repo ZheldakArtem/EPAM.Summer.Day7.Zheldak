@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task_Shape
 {
+    /// <summary>
+    /// The abstract class describing Shape
+    /// </summary>
     public abstract class Shape
     {
         public abstract double GetPerimeter();
